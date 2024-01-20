@@ -1,0 +1,33 @@
+[33mcommit 1847f69d86aaeb9fe5fe76ed335d5ed96c5d2406[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mkey_expansion_dirty[m[33m, [m[1;31morigin/key_expansion_dirty[m[33m)[m
+Author: Ayush Mohril <mohrilayush@gmail.com>
+Date:   Wed Jan 17 15:26:01 2024 +0530
+
+    completed first attemp at key expansion
+    
+    optimization to be done to it.
+    added a tb to simulate it
+    failing at implementation run due  to too many io ports required
+
+[33mcommit 2b63ab40584b09be700ab0faf486a94c3e72dd34[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: ayush-mohril <ayush.mohril@nium.org.in>
+Date:   Tue Jan 16 23:26:25 2024 +0530
+
+    added key expansion rtl created by rohit to the project
+
+[33mcommit f1b4ea81e92f1c486e4f5e4e2a4e50b229230940[m
+Author: ayush-mohril <ayush.mohril@nium.org.in>
+Date:   Sun Jan 14 20:51:38 2024 +0530
+
+    tarted implementing sbox and subword functionaliyt of aes encryption in verilog
+
+[33mcommit 844c10de6ed8b3544405274873e1371f3d552085[m
+Author: Ayush Mohril <mohrilayush@gmail.com>
+Date:   Tue Jan 9 20:52:22 2024 +0530
+
+    Update README.md
+
+[33mcommit a3bece682fa459436733959858270f44c07d1782[m
+Author: Ayush Mohril <mohrilayush@gmail.com>
+Date:   Tue Jan 9 00:44:16 2024 +0530
+
+    Initial commit
