@@ -36,7 +36,9 @@ initial
         reset = 'b1;
         data_in = 128'h3243f6a8885a308d313198a2e0370734;
         key = 128'h2b7e151628aed2a6abf7158809cf4f3c;
+//        data_in = 128'h00112233445566778899aabbccddeeff;
+//        key = 128'h000102030405060708090a0b0c0d0e0f;
         #20 reset = 'b0;
-        #500 $finish();
+        #2000 $finish();
     end
 endmodule
