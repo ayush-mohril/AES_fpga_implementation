@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Encryption(
+module Encryption_trial(
     input [127:0] data_in,
     input [127:0] key,
     output [127:0] cipher
