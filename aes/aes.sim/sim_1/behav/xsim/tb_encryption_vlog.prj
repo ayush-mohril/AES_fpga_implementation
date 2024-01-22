@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../aes.srcs/sources_1/imports/AES_fpga_implementation/Encryption.v" \
+"../../../../aes.srcs/sources_1/imports/Downloads/key_expansion.v" \
+"../../../../aes.srcs/sources_1/new/sbox.v" \
+
+sv xil_defaultlib  \
+"../../../../aes.srcs/sim_1/imports/Downloads/tb_encryption.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

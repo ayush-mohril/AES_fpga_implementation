@@ -39,19 +39,19 @@ module Encryption(
     wire [127:0] temp;
     reg [127:0] mix_columns_op;
     integer i;
-   function mul2(input [7:0]data_in);
-        mul2 = (data_in<<1'b1)^ (8'h1b&{8{data_in[7]}});
+   function [7:0] mul2(input [7:0]data_in);
+        mul2 = (data_in<<1'b1) ^ (8'h1b &{8{data_in[7]}});
    endfunction
    
-   function mul3(input [7:0]data_in);
+   function [7:0] mul3(input [7:0]data_in);
         mul3 = (mul2(data_in)^data_in);
    endfunction
    
    
     //initial s[0] = data_in ^ key;
     assign temp = data_in ^ round_key[0];
-    key_expansion K1 (key, round_key[0], round_key[1], round_key[2], round_key[3], round_key[4], round_key[5],round_key[6],
-                      round_key[7], round_key[8], round_key[9], round_key[10],en, clk , reset);
+    key_expansion K1 (.key(key), .k0(round_key[0]), .k1(round_key[1]), .k2(round_key[2]), .k3(round_key[3]), .k4(round_key[4]), .k5(round_key[5]),.k6(round_key[6]),
+                      .k7(round_key[7]), .k8(round_key[8]), .k9(round_key[9]), .k10(round_key[10]),.en(en), .clk(clk) , .reset(reset));
     
     reg [31:0] w0,w1,w2,w3;
     
@@ -180,7 +180,7 @@ module Encryption(
                         {shift_rows_ip[7:0],shift_rows_ip[103:96],shift_rows_ip[71:64],shift_rows_ip[39:32]};
                    // join
                     
-                    cipher = shift_rows_op;
+                    cipher = shift_rows_op ^ round_key[i+1];
                 end
             end
             

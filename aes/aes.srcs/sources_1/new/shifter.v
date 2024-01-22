@@ -26,11 +26,11 @@ output [127:0]op
     );
     
    // assign op = inp << 1'b1;
-    function mul2(input [7:0]data_in);
-        mul2 = (data_in<<1'b1)^ (8'h1b&{8{data_in[7]}});
+    function [7:0]mul2(input [7:0] data_in);
+        mul2 = {data_in[6:0],1'b0} ^ (8'h1b & {8{data_in[7]}});
    endfunction
    
-   function mul3(input [7:0]data_in);
+   function [7:0]mul3(input [7:0]data_in);
         mul3 = (mul2(data_in)^data_in);
    endfunction
    
